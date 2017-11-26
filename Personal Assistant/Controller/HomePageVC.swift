@@ -36,6 +36,31 @@ class HomePageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return AssistanceCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch(indexPath.row) {
+        case 0  :
+            performSegue(withIdentifier: "PersonalDiarySegue", sender: nil)
+            break;
+        case 1  :
+            performSegue(withIdentifier: "LocateFriendsSegue", sender: nil)
+            break;
+        case 2  :
+            performSegue(withIdentifier: "HealthDashboardSegue", sender: nil)
+            break;
+        case 3  :
+            performSegue(withIdentifier: "ImageRecognitionSegue", sender: nil)
+            break;
+        default :
+            print("Inside default statement")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+    }
 
 
 }

@@ -15,6 +15,14 @@
 		D1A6F7B91FC9606900C504E8 /* AssistanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7B81FC9606900C504E8 /* AssistanceCell.swift */; };
 		D1A6F7BB1FC9669800C504E8 /* Assistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7BA1FC9669800C504E8 /* Assistance.swift */; };
 		D1A6F7BE1FC967CD00C504E8 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7BD1FC967CD00C504E8 /* DataService.swift */; };
+		D1A6F7C01FCA28AF00C504E8 /* PersonalDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7BF1FCA28AF00C504E8 /* PersonalDiaryVC.swift */; };
+		D1A6F7C21FCA297700C504E8 /* LocateFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7C11FCA297700C504E8 /* LocateFriendsVC.swift */; };
+		D1A6F7C41FCA299100C504E8 /* HealthDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7C31FCA299100C504E8 /* HealthDashboardVC.swift */; };
+		D1A6F7C61FCA29B300C504E8 /* ImageRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7C51FCA29B300C504E8 /* ImageRecognitionVC.swift */; };
+		D1A6F7CB1FCA9F0900C504E8 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7CA1FCA9F0900C504E8 /* SqueezeNet.mlmodel */; };
+		D1A6F7D11FCA9F3900C504E8 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7CE1FCA9F3900C504E8 /* RoundedShadowView.swift */; };
+		D1A6F7D21FCA9F3900C504E8 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7CF1FCA9F3900C504E8 /* RoundedShadowButton.swift */; };
+		D1A6F7D31FCA9F3900C504E8 /* RoundedShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7D01FCA9F3900C504E8 /* RoundedShadowImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		D1A6F7B81FC9606900C504E8 /* AssistanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceCell.swift; sourceTree = "<group>"; };
 		D1A6F7BA1FC9669800C504E8 /* Assistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistance.swift; sourceTree = "<group>"; };
 		D1A6F7BD1FC967CD00C504E8 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D1A6F7BF1FCA28AF00C504E8 /* PersonalDiaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDiaryVC.swift; sourceTree = "<group>"; };
+		D1A6F7C11FCA297700C504E8 /* LocateFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateFriendsVC.swift; sourceTree = "<group>"; };
+		D1A6F7C31FCA299100C504E8 /* HealthDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDashboardVC.swift; sourceTree = "<group>"; };
+		D1A6F7C51FCA29B300C504E8 /* ImageRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognitionVC.swift; sourceTree = "<group>"; };
+		D1A6F7CA1FCA9F0900C504E8 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		D1A6F7CE1FCA9F3900C504E8 /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		D1A6F7CF1FCA9F3900C504E8 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		D1A6F7D01FCA9F3900C504E8 /* RoundedShadowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 		D1A6F7A21FC948CC00C504E8 /* Personal Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				D1A6F7C91FCA9F0900C504E8 /* Resources */,
 				D1A6F7BC1FC9679C00C504E8 /* Services */,
 				D1A6F7B71FC95FFF00C504E8 /* View */,
 				D1A6F7B61FC95FF700C504E8 /* Model */,
@@ -77,6 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				D1A6F7A51FC948CC00C504E8 /* HomePageVC.swift */,
+				D1A6F7BF1FCA28AF00C504E8 /* PersonalDiaryVC.swift */,
+				D1A6F7C11FCA297700C504E8 /* LocateFriendsVC.swift */,
+				D1A6F7C31FCA299100C504E8 /* HealthDashboardVC.swift */,
+				D1A6F7C51FCA29B300C504E8 /* ImageRecognitionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +113,9 @@
 		D1A6F7B71FC95FFF00C504E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D1A6F7CF1FCA9F3900C504E8 /* RoundedShadowButton.swift */,
+				D1A6F7D01FCA9F3900C504E8 /* RoundedShadowImageView.swift */,
+				D1A6F7CE1FCA9F3900C504E8 /* RoundedShadowView.swift */,
 				D1A6F7B81FC9606900C504E8 /* AssistanceCell.swift */,
 			);
 			path = View;
@@ -103,6 +127,14 @@
 				D1A6F7BD1FC967CD00C504E8 /* DataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D1A6F7C91FCA9F0900C504E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6F7CA1FCA9F0900C504E8 /* SqueezeNet.mlmodel */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,10 +210,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A6F7B91FC9606900C504E8 /* AssistanceCell.swift in Sources */,
+				D1A6F7D21FCA9F3900C504E8 /* RoundedShadowButton.swift in Sources */,
+				D1A6F7C41FCA299100C504E8 /* HealthDashboardVC.swift in Sources */,
 				D1A6F7BB1FC9669800C504E8 /* Assistance.swift in Sources */,
+				D1A6F7D31FCA9F3900C504E8 /* RoundedShadowImageView.swift in Sources */,
+				D1A6F7C01FCA28AF00C504E8 /* PersonalDiaryVC.swift in Sources */,
 				D1A6F7A61FC948CC00C504E8 /* HomePageVC.swift in Sources */,
+				D1A6F7C61FCA29B300C504E8 /* ImageRecognitionVC.swift in Sources */,
 				D1A6F7A41FC948CC00C504E8 /* AppDelegate.swift in Sources */,
+				D1A6F7D11FCA9F3900C504E8 /* RoundedShadowView.swift in Sources */,
+				D1A6F7CB1FCA9F0900C504E8 /* SqueezeNet.mlmodel in Sources */,
 				D1A6F7BE1FC967CD00C504E8 /* DataService.swift in Sources */,
+				D1A6F7C21FCA297700C504E8 /* LocateFriendsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
