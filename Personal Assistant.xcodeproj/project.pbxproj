@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5041001B1FCF880400135A05 /* FallDetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041001A1FCF880400135A05 /* FallDetectionVC.swift */; };
+		5041001D1FCF92D300135A05 /* FallingPerson1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5041001C1FCF92D300135A05 /* FallingPerson1.png */; };
 		50ED289C1FCC2E5400C459AD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ED289B1FCC2E5400C459AD /* DetailViewController.swift */; };
 		D1A6F7A41FC948CC00C504E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7A31FC948CC00C504E8 /* AppDelegate.swift */; };
 		D1A6F7A61FC948CC00C504E8 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7A51FC948CC00C504E8 /* HomePageVC.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5041001A1FCF880400135A05 /* FallDetectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallDetectionVC.swift; sourceTree = "<group>"; };
+		5041001C1FCF92D300135A05 /* FallingPerson1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FallingPerson1.png; sourceTree = "<group>"; };
 		50ED289B1FCC2E5400C459AD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1A6F7A01FC948CC00C504E8 /* Personal Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A6F7A31FC948CC00C504E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		D1A6F7A21FC948CC00C504E8 /* Personal Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				5041001C1FCF92D300135A05 /* FallingPerson1.png */,
 				D1A6F7C91FCA9F0900C504E8 /* Resources */,
 				D1A6F7BC1FC9679C00C504E8 /* Services */,
 				D1A6F7B71FC95FFF00C504E8 /* View */,
@@ -100,6 +105,7 @@
 				50ED289B1FCC2E5400C459AD /* DetailViewController.swift */,
 				D1A6F7C11FCA297700C504E8 /* LocateFriendsVC.swift */,
 				D1A6F7C31FCA299100C504E8 /* HealthDashboardVC.swift */,
+				5041001A1FCF880400135A05 /* FallDetectionVC.swift */,
 				D1A6F7C51FCA29B300C504E8 /* ImageRecognitionVC.swift */,
 			);
 			path = Controller;
@@ -201,6 +207,7 @@
 			files = (
 				D1A6F7AE1FC948CC00C504E8 /* LaunchScreen.storyboard in Resources */,
 				D1A6F7AB1FC948CC00C504E8 /* Assets.xcassets in Resources */,
+				5041001D1FCF92D300135A05 /* FallingPerson1.png in Resources */,
 				D1A6F7A91FC948CC00C504E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5041001B1FCF880400135A05 /* FallDetectionVC.swift in Sources */,
 				D1A6F7B91FC9606900C504E8 /* AssistanceCell.swift in Sources */,
 				D1A6F7D21FCA9F3900C504E8 /* RoundedShadowButton.swift in Sources */,
 				D1A6F7C41FCA299100C504E8 /* HealthDashboardVC.swift in Sources */,
@@ -363,9 +371,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E832NE8AV8;
 				INFOPLIST_FILE = "Personal Assistant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TheUltimates.Personal-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,9 +386,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E832NE8AV8;
 				INFOPLIST_FILE = "Personal Assistant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.TheUltimates.Personal-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

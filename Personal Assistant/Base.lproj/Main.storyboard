@@ -49,7 +49,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwS-Te-hS0">
-                                                    <rect key="frame" x="144.66666666666666" y="65" width="124.99999999999997" height="24"/>
+                                                    <rect key="frame" x="145" y="65" width="125" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -90,6 +90,7 @@
                         <segue destination="3EF-n0-jCT" kind="show" identifier="LocateFriendsSegue" id="TVU-7a-0Zp"/>
                         <segue destination="aCL-WP-SFh" kind="show" identifier="HealthDashboardSegue" id="zdN-6p-l7k"/>
                         <segue destination="JH8-si-N1A" kind="show" identifier="ImageRecognitionSegue" id="vy7-Vu-tqK"/>
+                        <segue destination="zfm-Du-Uko" kind="show" identifier="FallDetectionSegue" id="mVT-ea-4lK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,7 +154,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-9o-xpD">
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -203,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySp-P6-ADh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520.8" y="841.52923538230891"/>
+            <point key="canvasLocation" x="2110" y="842"/>
         </scene>
         <!--Image RecognitionVC-->
         <scene sceneID="3ae-hN-Is2">
@@ -304,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIe-MP-RFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.8000000000002" y="841.52923538230891"/>
+            <point key="canvasLocation" x="4370" y="842"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VhK-Du-U4l">
@@ -346,8 +347,92 @@
             </objects>
             <point key="canvasLocation" x="-932" y="842"/>
         </scene>
+        <!--Fall DetectionVC-->
+        <scene sceneID="sZF-eR-zdS">
+            <objects>
+                <viewController id="zfm-Du-Uko" customClass="FallDetectionVC" customModule="falldetect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Hp-rI-428"/>
+                        <viewControllerLayoutGuide type="bottom" id="uqx-hZ-gv1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DNG-9t-J1d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fall Detection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eol-Qa-C1e">
+                                <rect key="frame" x="91" y="20" width="193" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Phone Fall:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfi-JX-1Th">
+                                <rect key="frame" x="152" y="72.666666666666671" width="89.666666666666686" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFj-DD-PAE" customClass="RoundedShadowButton" customModule="Personal_Assistant" customModuleProvider="target">
+                                <rect key="frame" x="107" y="676" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.2274509804" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Disable Detection">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopBtn:" destination="zfm-Du-Uko" eventType="touchUpInside" id="W0Z-Hi-AFE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FallingPerson1.png" translatesAutoresizingMaskIntoConstraints="NO" id="spo-F6-l2l">
+                                <rect key="frame" x="0.0" y="128" width="414" height="480"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Fall Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itU-c4-Wzb">
+                                <rect key="frame" x="0.0" y="94" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hdn-aI-N8j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq8-hu-NIU" customClass="RoundedShadowButton" customModule="Personal_Assistant" customModuleProvider="target">
+                                <rect key="frame" x="107" y="616" width="200" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.33867791295051575" green="0.66832423210144043" blue="0.3078702986240387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Start Detection">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtn:" destination="zfm-Du-Uko" eventType="touchUpInside" id="79l-uS-Hvi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="itU-c4-Wzb" firstAttribute="leading" secondItem="FIn-Pn-1g1" secondAttribute="leading" id="68t-iV-l57"/>
+                            <constraint firstItem="FIn-Pn-1g1" firstAttribute="trailing" secondItem="itU-c4-Wzb" secondAttribute="trailing" id="92Y-Fj-PaG"/>
+                            <constraint firstItem="spo-F6-l2l" firstAttribute="top" secondItem="Kfi-JX-1Th" secondAttribute="bottom" constant="35" id="96V-HC-nAG"/>
+                            <constraint firstItem="spo-F6-l2l" firstAttribute="centerY" secondItem="DNG-9t-J1d" secondAttribute="centerY" id="d4I-ei-PJe"/>
+                            <constraint firstItem="zFj-DD-PAE" firstAttribute="centerY" secondItem="DNG-9t-J1d" secondAttribute="centerY" id="fVY-3T-loD"/>
+                            <constraint firstItem="itU-c4-Wzb" firstAttribute="top" secondItem="0Hp-rI-428" secondAttribute="bottom" constant="30" id="kBM-N9-aSZ"/>
+                            <constraint firstAttribute="trailing" secondItem="spo-F6-l2l" secondAttribute="trailing" id="kK2-3S-Mnh"/>
+                            <constraint firstItem="spo-F6-l2l" firstAttribute="centerX" secondItem="DNG-9t-J1d" secondAttribute="centerX" id="mIQ-Jm-2Vh"/>
+                            <constraint firstItem="spo-F6-l2l" firstAttribute="leading" secondItem="FIn-Pn-1g1" secondAttribute="leading" id="v1G-nN-Ahd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FIn-Pn-1g1"/>
+                    </view>
+                    <connections>
+                        <outlet property="detectText" destination="itU-c4-Wzb" id="to3-mO-05o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ri2-lS-JFZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257.971014492754" y="841.304347826087"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="FallingPerson1.png" width="480" height="480"/>
         <image name="digital" width="1024" height="703"/>
     </resources>
 </document>

@@ -49,6 +49,9 @@ class HomePageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             performSegue(withIdentifier: "HealthDashboardSegue", sender: nil)
             break;
         case 3  :
+            performSegue(withIdentifier: "FallDetectionSegue", sender: nil)
+            break;
+        case 4  :
             performSegue(withIdentifier: "ImageRecognitionSegue", sender: nil)
             break;
         default :
