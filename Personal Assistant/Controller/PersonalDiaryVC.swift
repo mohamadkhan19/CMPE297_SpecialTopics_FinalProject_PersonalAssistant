@@ -31,11 +31,11 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
         navigationItem.title = "Personal Diary"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNote))
         self.navigationItem.rightBarButtonItem = addButton
-        self.navigationItem.leftBarButtonItem = editButtonItem
+        //self.navigationItem.leftBarButtonItem = editButtonItem
         
         //for storing in a file
-   //     let docsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
-   //     file = docsDir[0].appending("notes.txt")
+        //     let docsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
+        //     file = docsDir[0].appending("notes.txt")
         load()
     }
     
@@ -51,7 +51,7 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
         tabel.reloadData()
         save()
     }
-
+    
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         tabel.setEditing(editing, animated: animated)
@@ -61,14 +61,14 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
         data.remove(at: indexPath.row)
         tabel.deleteRows(at: [indexPath], with: .fade)
         save()
-     //  saveInFile()
+        //  saveInFile()
     }
     
     //delegate function to handle interactivity on click of the row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.performSegue(withIdentifier: "detail", sender: nil)
-       // print("\(data[indexPath.row])")
+        // print("\(data[indexPath.row])")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,10 +79,42 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
     }
     
     //saving in persistent storage
+    
     func save(){
+        let fileName = "SaveToArchives"
+        
         UserDefaults.standard.set(data, forKey: "notes")
+        
         // useful incase of a crash, the data is synchronized immediately to the persistent storage
+        
         UserDefaults.standard.synchronize()
+      
+        //archived
+        
+        // Save data to file
+     
+        let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        
+        let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+        
+        //filepath
+        
+        print("Saving..")
+        
+        print("Saved to Archives!!")
+        
+        print("Path of Archives: \(fileURL.path)")
+
+        // write to file
+        
+        NSKeyedArchiver.archiveRootObject(data, toFile: fileURL.path)
+   
+        // read from file
+        
+        let dict2 = String(describing: NSKeyedUnarchiver.unarchiveObject(withFile: fileURL.path))
+        
+        print("Contents of Archived File:\n"+dict2)
+        
     }
     
     // saving to a file
@@ -104,7 +136,7 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
         if(tabel.isEditing){
             return
         }
-        let name:String = "Row \(data.count+1)"
+        let name:String = ""//"Row \(data.count+1)"
         data.insert(name, at: 0)
         let indexPath:IndexPath = IndexPath(row: 0, section: 0)
         tabel.insertRows(at: [indexPath], with: .automatic)
@@ -112,3 +144,4 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
         self.performSegue(withIdentifier: "detail", sender: nil)
     }
 }
+

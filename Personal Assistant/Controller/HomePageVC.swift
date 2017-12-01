@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class HomePageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -40,7 +41,31 @@ class HomePageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.row) {
         case 0  :
-            performSegue(withIdentifier: "PersonalDiarySegue", sender: nil)
+            let context = LAContext()
+            var error: NSError?
+            
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                let reason = "Identify yourself!"
+                
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                    [unowned self] success, authenticationError in
+                    
+                    DispatchQueue.main.async {
+                        if success {
+                            self.performSegue(withIdentifier: "PersonalDiarySegue", sender: nil)
+                        } else {
+                            let ac = UIAlertController(title: "Authentication failed", message: "Sorry!", preferredStyle: .alert)
+                            ac.addAction(UIAlertAction(title: "OK", style: .default))
+                            self.present(ac, animated: true)
+                        }
+                    }
+                }
+            } else {
+                let ac = UIAlertController(title: "Touch ID not available", message: "Your device is not configured for Touch ID.", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                present(ac, animated: true)
+            }
+            
             break;
         case 1  :
             performSegue(withIdentifier: "LocateFriendsSegue", sender: nil)

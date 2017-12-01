@@ -21,7 +21,7 @@ class FallDetectionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "Fall Detection"
         motionManager.gyroUpdateInterval = 0.2
         motionManager.accelerometerUpdateInterval = 0.2
         motionManager.deviceMotionUpdateInterval = 0.1
@@ -39,6 +39,12 @@ class FallDetectionVC: UIViewController {
                 if (a < 0.1) {
                     self.detectText.text = "Detected Fall"
                     print("Detect phone fall...")
+                    let alert = UIAlertController(title: "SOS", message: "You Fell. LOL!", preferredStyle: UIAlertControllerStyle.alert)
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
                     self.motionManager.stopAccelerometerUpdates()
                 } else {
                     //phone not drop

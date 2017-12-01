@@ -12,11 +12,11 @@ class DataService{
     static let instance = DataService()
     
     private let assistanceCategories = [
-        Assistance(title: "Personal Diary", imageName: "digital.png"),
-        Assistance(title: "Locate Friends", imageName: "digital.png"),
-        Assistance(title: "Health Dashboard", imageName: "digital.png"),
-        Assistance(title: "Fall Detection", imageName: "digital.png"),
-        Assistance(title: "Image Recognition", imageName: "digital.png")
+        Assistance(title: "Personal Diary", imageName: "pdiary.png"),
+        Assistance(title: "Locate Nearby", imageName: "mapkit.png"),
+        Assistance(title: "Health Dashboard", imageName: "healthkit.png"),
+        Assistance(title: "Fall Detection", imageName: "fallDetection.png"),
+        Assistance(title: "Image Recognition", imageName: "imagerec.png")
     ]
     
     func getAssistance() -> [Assistance] {

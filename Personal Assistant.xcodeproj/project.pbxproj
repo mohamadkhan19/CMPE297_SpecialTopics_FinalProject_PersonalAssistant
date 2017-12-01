@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5041001B1FCF880400135A05 /* FallDetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041001A1FCF880400135A05 /* FallDetectionVC.swift */; };
-		5041001D1FCF92D300135A05 /* FallingPerson1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5041001C1FCF92D300135A05 /* FallingPerson1.png */; };
 		504100221FCFB15E00135A05 /* SCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100201FCFB15E00135A05 /* SCDetailViewController.swift */; };
 		504100231FCFB15E00135A05 /* SCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100211FCFB15E00135A05 /* SCHomeViewController.swift */; };
 		504100261FCFB1F700135A05 /* SCDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100241FCFB1F700135A05 /* SCDetailTableViewCell.swift */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		5041001A1FCF880400135A05 /* FallDetectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallDetectionVC.swift; sourceTree = "<group>"; };
-		5041001C1FCF92D300135A05 /* FallingPerson1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FallingPerson1.png; sourceTree = "<group>"; };
 		504100201FCFB15E00135A05 /* SCDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDetailViewController.swift; sourceTree = "<group>"; };
 		504100211FCFB15E00135A05 /* SCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeViewController.swift; sourceTree = "<group>"; };
 		504100241FCFB1F700135A05 /* SCDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D152E7241FD14AA400FB1C02 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5041002A1FCFB27A00135A05 /* SCUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		D1A6F7971FC948CC00C504E8 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +100,7 @@
 		D1A6F7A21FC948CC00C504E8 /* Personal Assistant */ = {
 			isa = PBXGroup;
 			children = (
-				5041001C1FCF92D300135A05 /* FallingPerson1.png */,
-				5041002A1FCFB27A00135A05 /* SCUtility.swift */,
+				D152E7241FD14AA400FB1C02 /* Utilities */,
 				D1A6F7C91FCA9F0900C504E8 /* Resources */,
 				D1A6F7BC1FC9679C00C504E8 /* Services */,
 				D1A6F7B71FC95FFF00C504E8 /* View */,
@@ -225,7 +230,6 @@
 			files = (
 				D1A6F7AE1FC948CC00C504E8 /* LaunchScreen.storyboard in Resources */,
 				D1A6F7AB1FC948CC00C504E8 /* Assets.xcassets in Resources */,
-				5041001D1FCF92D300135A05 /* FallingPerson1.png in Resources */,
 				D1A6F7A91FC948CC00C504E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DEURQ5CBDZ;
 				INFOPLIST_FILE = "Personal Assistant/Info.plist";
@@ -409,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DEURQ5CBDZ;
 				INFOPLIST_FILE = "Personal Assistant/Info.plist";

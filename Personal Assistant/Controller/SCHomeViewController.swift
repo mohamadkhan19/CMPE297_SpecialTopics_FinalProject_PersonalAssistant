@@ -18,6 +18,7 @@ class SCHomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeTableView.separatorStyle = .none
+        navigationItem.title = "Health Dashboard"
     }
 
     override func didReceiveMemoryWarning() {
