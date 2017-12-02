@@ -1,13 +1,15 @@
 //
 //  SCDetailViewController.swift
-//  StepCounter
+//  PersonalAssistant
 //
+//  Created by Nisha Raghu on 11/25/17.
+//  Copyright © 2017 TheUltimates.com. All rights reserved.
 //
 
 import UIKit
 import CoreMotion
 
-class SCDetailViewController: UIViewController {
+class HealthDashboardListVC: UIViewController {
 
     @IBOutlet weak var detailTableView: UITableView!
     static let calendar = NSCalendar.current
@@ -19,7 +21,7 @@ class SCDetailViewController: UIViewController {
         detailTableView.separatorStyle = .none
         self.navigationItem.title = selectedDay == 0
             ? "Today"
-            : (SCUtility.getFormattedDate(date: Date.init(timeInterval: TimeInterval(-86400 * selectedDay), since: Date())))
+            : (Utility.getFormattedDate(date: Date.init(timeInterval: TimeInterval(-86400 * selectedDay), since: Date())))
         self.navigationItem.backBarButtonItem?.title = ""
         // Do any additional setup after loading the view.
     }
@@ -31,7 +33,7 @@ class SCDetailViewController: UIViewController {
 
 }
 
-extension SCDetailViewController: UITableViewDataSource, UITableViewDelegate {
+extension HealthDashboardListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -40,18 +42,18 @@ extension SCDetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detailTablleViewCell", for: indexPath) as! SCDetailTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailTablleViewCell", for: indexPath) as! HDDetailTableViewCell
         let day = selectedDay
         let fromDate = Date.init(timeInterval: TimeInterval(-86400 * day), since: Date())
-        let fromDateMidnight = SCUtility.getMidnightDateTime(date: fromDate)
+        let fromDateMidnight = Utility.getMidnightDateTime(date: fromDate)
         let toDate = Date.init(timeInterval: 86400, since: fromDate)
-        let toDateMidnight = SCUtility.getMidnightDateTime(date: toDate)
+        let toDateMidnight = Utility.getMidnightDateTime(date: toDate)
         switch indexPath.row {
         case 0:
             cell.titleLabel.text = "Walking + Running Distance"
             cell.unitLabel.text = "mi"
             if (CMPedometer.isDistanceAvailable()) {
-                SCDetailViewController.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
+                HealthDashboardListVC.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
                     DispatchQueue.main.async(execute: { () -> Void in
                         if(error == nil){
                             let distance = Double(data.distance!) / 1609.344
@@ -67,7 +69,7 @@ extension SCDetailViewController: UITableViewDataSource, UITableViewDelegate {
             cell.titleLabel.text = "Steps"
             cell.unitLabel.text = "steps"
             if(CMPedometer.isStepCountingAvailable()){
-                SCHomeViewController.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
+                HeatlhDashboardHomeVC.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
                     DispatchQueue.main.async(execute: { () -> Void in
                             if(error == nil){
                                 cell.valueLabel.text = String(describing: data.numberOfSteps)
@@ -80,7 +82,7 @@ extension SCDetailViewController: UITableViewDataSource, UITableViewDelegate {
         case 2:
             cell.titleLabel.text = "Floors Ascended"
             if(CMPedometer.isFloorCountingAvailable()){
-                SCHomeViewController.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
+                HeatlhDashboardHomeVC.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
                     DispatchQueue.main.async(execute: { () -> Void in
                         if(error == nil){
                             cell.valueLabel.text = String(describing: data.floorsAscended!)

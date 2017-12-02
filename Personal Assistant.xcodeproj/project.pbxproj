@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5041001B1FCF880400135A05 /* FallDetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041001A1FCF880400135A05 /* FallDetectionVC.swift */; };
-		504100221FCFB15E00135A05 /* SCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100201FCFB15E00135A05 /* SCDetailViewController.swift */; };
-		504100231FCFB15E00135A05 /* SCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100211FCFB15E00135A05 /* SCHomeViewController.swift */; };
-		504100261FCFB1F700135A05 /* SCDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100241FCFB1F700135A05 /* SCDetailTableViewCell.swift */; };
-		504100271FCFB1F700135A05 /* SCHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100251FCFB1F700135A05 /* SCHomeTableViewCell.swift */; };
-		5041002B1FCFB27A00135A05 /* SCUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041002A1FCFB27A00135A05 /* SCUtility.swift */; };
-		50ED289C1FCC2E5400C459AD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ED289B1FCC2E5400C459AD /* DetailViewController.swift */; };
+		504100221FCFB15E00135A05 /* HealthDashboardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100201FCFB15E00135A05 /* HealthDashboardListVC.swift */; };
+		504100231FCFB15E00135A05 /* HeatlhDashboardHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100211FCFB15E00135A05 /* HeatlhDashboardHomeVC.swift */; };
+		504100261FCFB1F700135A05 /* HDDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100241FCFB1F700135A05 /* HDDetailTableViewCell.swift */; };
+		504100271FCFB1F700135A05 /* HDHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504100251FCFB1F700135A05 /* HDHomeTableViewCell.swift */; };
+		5041002B1FCFB27A00135A05 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041002A1FCFB27A00135A05 /* Utility.swift */; };
+		50ED289C1FCC2E5400C459AD /* HealthDashboardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ED289B1FCC2E5400C459AD /* HealthDashboardDetailVC.swift */; };
 		D16CACBF1FCFC92600671C0A /* LocaltionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CACBE1FCFC92600671C0A /* LocaltionViewController.swift */; };
 		D1A6F7A41FC948CC00C504E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7A31FC948CC00C504E8 /* AppDelegate.swift */; };
 		D1A6F7A61FC948CC00C504E8 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7A51FC948CC00C504E8 /* HomePageVC.swift */; };
@@ -24,8 +24,6 @@
 		D1A6F7BB1FC9669800C504E8 /* Assistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7BA1FC9669800C504E8 /* Assistance.swift */; };
 		D1A6F7BE1FC967CD00C504E8 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7BD1FC967CD00C504E8 /* DataService.swift */; };
 		D1A6F7C01FCA28AF00C504E8 /* PersonalDiaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7BF1FCA28AF00C504E8 /* PersonalDiaryVC.swift */; };
-		D1A6F7C21FCA297700C504E8 /* LocateFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7C11FCA297700C504E8 /* LocateFriendsVC.swift */; };
-		D1A6F7C41FCA299100C504E8 /* HealthDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7C31FCA299100C504E8 /* HealthDashboardVC.swift */; };
 		D1A6F7C61FCA29B300C504E8 /* ImageRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7C51FCA29B300C504E8 /* ImageRecognitionVC.swift */; };
 		D1A6F7CB1FCA9F0900C504E8 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7CA1FCA9F0900C504E8 /* SqueezeNet.mlmodel */; };
 		D1A6F7D11FCA9F3900C504E8 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F7CE1FCA9F3900C504E8 /* RoundedShadowView.swift */; };
@@ -35,12 +33,12 @@
 
 /* Begin PBXFileReference section */
 		5041001A1FCF880400135A05 /* FallDetectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallDetectionVC.swift; sourceTree = "<group>"; };
-		504100201FCFB15E00135A05 /* SCDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDetailViewController.swift; sourceTree = "<group>"; };
-		504100211FCFB15E00135A05 /* SCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeViewController.swift; sourceTree = "<group>"; };
-		504100241FCFB1F700135A05 /* SCDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDetailTableViewCell.swift; sourceTree = "<group>"; };
-		504100251FCFB1F700135A05 /* SCHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeTableViewCell.swift; sourceTree = "<group>"; };
-		5041002A1FCFB27A00135A05 /* SCUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCUtility.swift; sourceTree = "<group>"; };
-		50ED289B1FCC2E5400C459AD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		504100201FCFB15E00135A05 /* HealthDashboardListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDashboardListVC.swift; sourceTree = "<group>"; };
+		504100211FCFB15E00135A05 /* HeatlhDashboardHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeatlhDashboardHomeVC.swift; sourceTree = "<group>"; };
+		504100241FCFB1F700135A05 /* HDDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDDetailTableViewCell.swift; sourceTree = "<group>"; };
+		504100251FCFB1F700135A05 /* HDHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDHomeTableViewCell.swift; sourceTree = "<group>"; };
+		5041002A1FCFB27A00135A05 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		50ED289B1FCC2E5400C459AD /* HealthDashboardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDashboardDetailVC.swift; sourceTree = "<group>"; };
 		D16CACBE1FCFC92600671C0A /* LocaltionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaltionViewController.swift; sourceTree = "<group>"; };
 		D1A6F7A01FC948CC00C504E8 /* Personal Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A6F7A31FC948CC00C504E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +51,6 @@
 		D1A6F7BA1FC9669800C504E8 /* Assistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistance.swift; sourceTree = "<group>"; };
 		D1A6F7BD1FC967CD00C504E8 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D1A6F7BF1FCA28AF00C504E8 /* PersonalDiaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDiaryVC.swift; sourceTree = "<group>"; };
-		D1A6F7C11FCA297700C504E8 /* LocateFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateFriendsVC.swift; sourceTree = "<group>"; };
-		D1A6F7C31FCA299100C504E8 /* HealthDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDashboardVC.swift; sourceTree = "<group>"; };
 		D1A6F7C51FCA29B300C504E8 /* ImageRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognitionVC.swift; sourceTree = "<group>"; };
 		D1A6F7CA1FCA9F0900C504E8 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		D1A6F7CE1FCA9F3900C504E8 /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
@@ -76,9 +72,19 @@
 		D152E7241FD14AA400FB1C02 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5041002A1FCFB27A00135A05 /* SCUtility.swift */,
+				5041002A1FCFB27A00135A05 /* Utility.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D152E7251FD20F7D00FB1C02 /* HealthVC */ = {
+			isa = PBXGroup;
+			children = (
+				50ED289B1FCC2E5400C459AD /* HealthDashboardDetailVC.swift */,
+				504100201FCFB15E00135A05 /* HealthDashboardListVC.swift */,
+				504100211FCFB15E00135A05 /* HeatlhDashboardHomeVC.swift */,
+			);
+			path = HealthVC;
 			sourceTree = "<group>";
 		};
 		D1A6F7971FC948CC00C504E8 = {
@@ -118,14 +124,10 @@
 		D1A6F7B51FC948E100C504E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D152E7251FD20F7D00FB1C02 /* HealthVC */,
 				D1A6F7A51FC948CC00C504E8 /* HomePageVC.swift */,
 				D16CACBE1FCFC92600671C0A /* LocaltionViewController.swift */,
 				D1A6F7BF1FCA28AF00C504E8 /* PersonalDiaryVC.swift */,
-				50ED289B1FCC2E5400C459AD /* DetailViewController.swift */,
-				D1A6F7C11FCA297700C504E8 /* LocateFriendsVC.swift */,
-				504100201FCFB15E00135A05 /* SCDetailViewController.swift */,
-				504100211FCFB15E00135A05 /* SCHomeViewController.swift */,
-				D1A6F7C31FCA299100C504E8 /* HealthDashboardVC.swift */,
 				5041001A1FCF880400135A05 /* FallDetectionVC.swift */,
 				D1A6F7C51FCA29B300C504E8 /* ImageRecognitionVC.swift */,
 			);
@@ -144,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				D1A6F7CF1FCA9F3900C504E8 /* RoundedShadowButton.swift */,
-				504100241FCFB1F700135A05 /* SCDetailTableViewCell.swift */,
-				504100251FCFB1F700135A05 /* SCHomeTableViewCell.swift */,
+				504100241FCFB1F700135A05 /* HDDetailTableViewCell.swift */,
+				504100251FCFB1F700135A05 /* HDHomeTableViewCell.swift */,
 				D1A6F7D01FCA9F3900C504E8 /* RoundedShadowImageView.swift */,
 				D1A6F7CE1FCA9F3900C504E8 /* RoundedShadowView.swift */,
 				D1A6F7B81FC9606900C504E8 /* AssistanceCell.swift */,
@@ -245,23 +247,21 @@
 				5041001B1FCF880400135A05 /* FallDetectionVC.swift in Sources */,
 				D1A6F7B91FC9606900C504E8 /* AssistanceCell.swift in Sources */,
 				D1A6F7D21FCA9F3900C504E8 /* RoundedShadowButton.swift in Sources */,
-				D1A6F7C41FCA299100C504E8 /* HealthDashboardVC.swift in Sources */,
 				D1A6F7BB1FC9669800C504E8 /* Assistance.swift in Sources */,
-				504100231FCFB15E00135A05 /* SCHomeViewController.swift in Sources */,
+				504100231FCFB15E00135A05 /* HeatlhDashboardHomeVC.swift in Sources */,
 				D1A6F7D31FCA9F3900C504E8 /* RoundedShadowImageView.swift in Sources */,
 				D1A6F7C01FCA28AF00C504E8 /* PersonalDiaryVC.swift in Sources */,
 				D1A6F7A61FC948CC00C504E8 /* HomePageVC.swift in Sources */,
 				D1A6F7C61FCA29B300C504E8 /* ImageRecognitionVC.swift in Sources */,
 				D1A6F7A41FC948CC00C504E8 /* AppDelegate.swift in Sources */,
 				D1A6F7D11FCA9F3900C504E8 /* RoundedShadowView.swift in Sources */,
-				5041002B1FCFB27A00135A05 /* SCUtility.swift in Sources */,
-				504100261FCFB1F700135A05 /* SCDetailTableViewCell.swift in Sources */,
+				5041002B1FCFB27A00135A05 /* Utility.swift in Sources */,
+				504100261FCFB1F700135A05 /* HDDetailTableViewCell.swift in Sources */,
 				D1A6F7CB1FCA9F0900C504E8 /* SqueezeNet.mlmodel in Sources */,
 				D1A6F7BE1FC967CD00C504E8 /* DataService.swift in Sources */,
-				504100271FCFB1F700135A05 /* SCHomeTableViewCell.swift in Sources */,
-				D1A6F7C21FCA297700C504E8 /* LocateFriendsVC.swift in Sources */,
-				50ED289C1FCC2E5400C459AD /* DetailViewController.swift in Sources */,
-				504100221FCFB15E00135A05 /* SCDetailViewController.swift in Sources */,
+				504100271FCFB1F700135A05 /* HDHomeTableViewCell.swift in Sources */,
+				50ED289C1FCC2E5400C459AD /* HealthDashboardDetailVC.swift in Sources */,
+				504100221FCFB15E00135A05 /* HealthDashboardListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

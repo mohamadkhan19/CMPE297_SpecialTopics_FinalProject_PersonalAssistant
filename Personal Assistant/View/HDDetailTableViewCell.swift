@@ -1,13 +1,14 @@
 //
 //  SCDetailTableViewCell.swift
-//  StepCounter
+//  PersonalAssistant
 //
-
+//  Created by Nisha Raghu on 11/25/17.
+//  Copyright © 2017 TheUltimates.com. All rights reserved.
 //
 
 import UIKit
 
-class SCDetailTableViewCell: UITableViewCell {
+class HDDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!

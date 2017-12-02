@@ -1,13 +1,14 @@
 //
 //  SCHomeTableViewCell.swift
-//  StepCounter
+//  PersonalAssistant
 //
-
+//  Created by Nisha Raghu on 11/25/17.
+//  Copyright © 2017 TheUltimates.com. All rights reserved.
 //
 
 import UIKit
 
-class SCHomeTableViewCell: UITableViewCell {
+class HDHomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var numberOfSteps: UILabel!

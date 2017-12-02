@@ -1,14 +1,14 @@
 //
 //  LocaltionViewController.swift
-//  smart_tree_assignment
+//  PersonalAssistant
 //
-//  Created by amit kumar on 9/18/17.
-//  Copyright © 2017 amit kumar. All rights reserved.
+//  Created by Mohamad Khan on 11/25/17.
+//  Copyright © 2017 TheUltimates.com. All rights reserved.
 //
 
 import UIKit
 import MapKit
-
+import CoreLocation
 
 class LocaltionViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate {
     
@@ -41,7 +41,7 @@ class LocaltionViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Locate Nearby"
         
         let searchButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(LocaltionViewController.searchButtonAction(_:)))
         self.navigationItem.rightBarButtonItem = searchButton
@@ -84,8 +84,7 @@ class LocaltionViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         present(searchController, animated: true, completion: nil)
     }
     
-    // MARK: - UISearchBarDelegate
-    
+    // nearby logic
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         dismiss(animated: true, completion: nil)
@@ -119,8 +118,7 @@ class LocaltionViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         }
     }
     
-    // MARK: - CLLocationManagerDelegate
-    
+    // users current location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if !isCurrentLocation {

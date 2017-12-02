@@ -1,14 +1,14 @@
 //
-//  SCUtility.swift
-//  StepCounter
+//  Utility
+//  PersonalAssistant
 //
-//  Created by Saylee Pradhan on 7/4/17.
-//  Copyright © 2017 Saylee Pradhan. All rights reserved.
+//  Created by Nisha Raghu on 11/25/17.
+//  Copyright © 2017 TheUltimates.com. All rights reserved.
 //
 
 import Foundation
 
-class SCUtility {
+class Utility {
 
     static let numberOfDays = 10
     class func getString(fromDate date: Date) -> String {

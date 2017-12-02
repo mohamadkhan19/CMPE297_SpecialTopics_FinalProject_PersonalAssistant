@@ -146,7 +146,7 @@
         <!--Note-->
         <scene sceneID="a14-zm-bdo">
             <objects>
-                <viewController title="Note" id="vFK-FY-oEg" customClass="DetailViewController" customModule="Personal_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Note" id="vFK-FY-oEg" customClass="HealthDashboardDetailVC" customModule="Personal_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bRI-1M-CSk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,6 @@
                                         <rect key="frame" x="0.0" y="30" width="374" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="56L-DM-x9m"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="sJv-LX-Lg1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                         <nil key="textColor"/>
@@ -229,7 +228,7 @@
                                 <rect key="frame" x="20" y="686" width="85" height="30"/>
                                 <color key="backgroundColor" red="0.99404441874775362" green="1" blue="0.9921410177308212" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="Fcl-VH-Lmf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="Fcl-VH-Lmf"/>
                                     <constraint firstAttribute="height" constant="30" id="IQd-m3-IcV"/>
                                 </constraints>
                                 <state key="normal" title="Flash OFF">
@@ -385,13 +384,13 @@
         <!--Step Counter-->
         <scene sceneID="ZYF-vX-PcU">
             <objects>
-                <tableViewController id="as2-YT-aef" customClass="SCHomeViewController" customModule="Personal_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="as2-YT-aef" customClass="HeatlhDashboardHomeVC" customModule="Personal_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" id="g1l-Pn-ffD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="stepCounterTableViewCell" rowHeight="125" id="tp9-oc-nYq" customClass="SCHomeTableViewCell" customModule="Personal_Assistant" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="stepCounterTableViewCell" rowHeight="125" id="tp9-oc-nYq" customClass="HDHomeTableViewCell" customModule="Personal_Assistant" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tp9-oc-nYq" id="Ldk-T8-MoK">
@@ -474,10 +473,10 @@
             </objects>
             <point key="canvasLocation" x="1632" y="842"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Health Dashboard ListVC-->
         <scene sceneID="92t-bR-Dhb">
             <objects>
-                <viewController id="Ajt-03-Yq1" customClass="SCDetailViewController" customModule="Personal_Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ajt-03-Yq1" customClass="HealthDashboardListVC" customModule="Personal_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wos-Cq-scz"/>
                         <viewControllerLayoutGuide type="bottom" id="Vwu-9k-kE9"/>
@@ -501,7 +500,7 @@
                                 <rect key="frame" x="20" y="112" width="374" height="604"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailTablleViewCell" rowHeight="87" id="OBA-94-5kN" customClass="SCDetailTableViewCell" customModule="Personal_Assistant" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailTablleViewCell" rowHeight="87" id="OBA-94-5kN" customClass="HDDetailTableViewCell" customModule="Personal_Assistant" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OBA-94-5kN" id="NSs-Ek-UwK">

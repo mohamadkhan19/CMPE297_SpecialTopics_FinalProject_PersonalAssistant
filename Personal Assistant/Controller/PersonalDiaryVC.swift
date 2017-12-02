@@ -1,6 +1,6 @@
 //
 //  PersonalDiaryVC.swift
-//  Personal Assistant
+//  PersonalAssistant
 //
 //  Created by Mohamad Khan on 11/25/17.
 //  Copyright © 2017 TheUltimates.com. All rights reserved.
@@ -31,11 +31,6 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
         navigationItem.title = "Personal Diary"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNote))
         self.navigationItem.rightBarButtonItem = addButton
-        //self.navigationItem.leftBarButtonItem = editButtonItem
-        
-        //for storing in a file
-        //     let docsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
-        //     file = docsDir[0].appending("notes.txt")
         load()
     }
     
@@ -72,13 +67,14 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailView:DetailViewController = segue.destination as! DetailViewController
+        let detailView:HealthDashboardDetailVC = segue.destination as! HealthDashboardDetailVC
         selectedRow = tabel.indexPathForSelectedRow!.row
         detailView.masterView = self
         detailView.setText(t: data[selectedRow])
     }
     
     //saving in persistent storage
+    // Archieve logic
     
     func save(){
         let fileName = "SaveToArchives"
@@ -117,12 +113,6 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
         
     }
     
-    // saving to a file
-    func saveInFile(){
-        let newData:NSArray =  NSArray(array: data)
-        newData.write(toFile: file, atomically: true)
-    }
-    
     func load(){
         //load from file..
         //if let loadedData = NSArray(contentsOfFile:file) as? [String]{
@@ -131,7 +121,7 @@ class PersonalDiaryVC: UIViewController,UITableViewDataSource, UITableViewDelega
             tabel.reloadData()
         }
     }
-    
+    // add note
     @objc func addNote(){
         if(tabel.isEditing){
             return

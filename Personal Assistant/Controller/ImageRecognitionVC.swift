@@ -1,6 +1,6 @@
 //
 //  ImageRecognitionVC.swift
-//  Personal Assistant
+//  PersonalAssistant
 //
 //  Created by Mohamad Khan on 11/25/17.
 //  Copyright © 2017 TheUltimates.com. All rights reserved.
@@ -83,7 +83,7 @@ class ImageRecognitionVC: UIViewController {
             debugPrint(error)
         }
     }
-    
+    // to capture the image
     @objc func didTapCameraView() {
         self.cameraView.isUserInteractionEnabled = false
         self.spinner.isHidden = false
@@ -103,7 +103,7 @@ class ImageRecognitionVC: UIViewController {
         
         cameraOutput.capturePhoto(with: settings, delegate: self)
     }
-    
+    // model gives back the result
     func resultsMethod(request: VNRequest, error: Error?) {
         guard let results = request.results as? [VNClassificationObservation] else { return }
         
@@ -125,7 +125,7 @@ class ImageRecognitionVC: UIViewController {
             }
         }
     }
-    
+    // for text to speech
     func synthesizeSpeech(fromString string: String) {
         let speechUtterance = AVSpeechUtterance(string: string)
         speechSynthesizer.speak(speechUtterance)
@@ -143,7 +143,7 @@ class ImageRecognitionVC: UIViewController {
     }
     
 }
-
+// coreML logic
 extension ImageRecognitionVC: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let error = error {

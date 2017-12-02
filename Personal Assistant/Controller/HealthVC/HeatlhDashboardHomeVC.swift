@@ -1,13 +1,15 @@
 //
 //  SCHomeViewController.swift
-//  StepCounter
+//  PersonalAssistant
 //
+//  Created by Nisha Raghu on 11/25/17.
+//  Copyright © 2017 TheUltimates.com. All rights reserved.
 //
 
 import UIKit
 import CoreMotion
 
-class SCHomeViewController: UITableViewController {
+class HeatlhDashboardHomeVC: UITableViewController {
 
     @IBOutlet var homeTableView: UITableView!
     static let calendar = NSCalendar.current
@@ -34,9 +36,9 @@ class SCHomeViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "detailViewSegue" {
-            if segue.destination is SCDetailViewController {
-                let detailVC = segue.destination as! SCDetailViewController
-                if let cell = sender as? SCHomeTableViewCell {
+            if segue.destination is HealthDashboardListVC {
+                let detailVC = segue.destination as! HealthDashboardListVC
+                if let cell = sender as? HDHomeTableViewCell {
                     let pointInTable: CGPoint = cell.convert(cell.bounds.origin, to: self.tableView)
                     let cellIndexPath = self.tableView.indexPathForRow(at: pointInTable)
                     detailVC.selectedDay = (cellIndexPath?.row)!
@@ -51,9 +53,9 @@ class SCHomeViewController: UITableViewController {
 
 }
 
-extension SCHomeViewController {
+extension HeatlhDashboardHomeVC {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SCUtility.numberOfDays
+        return Utility.numberOfDays
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,14 +65,14 @@ extension SCHomeViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stepCounterTableViewCell", for: indexPath) as! SCHomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stepCounterTableViewCell", for: indexPath) as! HDHomeTableViewCell
         let day = indexPath.row
         let fromDate = Date.init(timeInterval: TimeInterval(-86400 * day), since: Date())
-        let fromDateMidnight = SCUtility.getMidnightDateTime(date: fromDate)
+        let fromDateMidnight = Utility.getMidnightDateTime(date: fromDate)
         let toDate = Date.init(timeInterval: 86400, since: fromDate)
-        let toDateMidnight = SCUtility.getMidnightDateTime(date: toDate)
+        let toDateMidnight = Utility.getMidnightDateTime(date: toDate)
         if(CMPedometer.isStepCountingAvailable()){
-            SCHomeViewController.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
+            HeatlhDashboardHomeVC.pedoMeter.queryPedometerData(from: fromDateMidnight, to: toDateMidnight) { (data : CMPedometerData!, error) -> Void in
                 DispatchQueue.main.async(execute: { () -> Void in
                     if(error == nil){
                         cell.numberOfSteps.text = String(describing: data.numberOfSteps)
@@ -79,7 +81,7 @@ extension SCHomeViewController {
                 
             }
         }
-        cell.dateLabel.text = day == 0 ? "Today" : SCUtility.getFormattedDate(date: fromDate)
+        cell.dateLabel.text = day == 0 ? "Today" : Utility.getFormattedDate(date: fromDate)
         return cell
     }
     

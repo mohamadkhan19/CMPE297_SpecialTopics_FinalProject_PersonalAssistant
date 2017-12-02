@@ -1,12 +1,10 @@
 //
-//  ViewController.swift
-//  falldetect
+//  FallDetectionVC.swift
+//  PersonalAssistant
 //
-//  Created by Nisha Raghu on 10/21/17.
-//  Copyright © 2017 cmpe297. All rights reserved.
+//  Created by Nisha Raghu on 11/25/17.
+//  Copyright © 2017 TheUltimates.com. All rights reserved.
 //
-
-//Testing concept referenced from http://stackoverflow.com/questions/14445914/detect-programmatically-if-iphone-is-dropped-using-coremotion-accelerometer
 
 import UIKit
 import CoreMotion
@@ -22,9 +20,6 @@ class FallDetectionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Fall Detection"
-        motionManager.gyroUpdateInterval = 0.2
-        motionManager.accelerometerUpdateInterval = 0.2
-        motionManager.deviceMotionUpdateInterval = 0.1
         self.detectAccel()
     }
    
@@ -55,12 +50,6 @@ class FallDetectionVC: UIViewController {
             }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     @IBAction func startBtn(_ sender: UIButton) {
         self.detectAccel()

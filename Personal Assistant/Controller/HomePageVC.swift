@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Personal Assistant
+//  PersonalAssistant
 //
 //  Created by Mohamad Khan on 11/24/17.
 //  Copyright © 2017 TheUltimates.com. All rights reserved.
